@@ -1,0 +1,28 @@
+import especies.*
+
+describe "especies"{
+	
+	var menta1 = new Menta(altura = 1, anioDeObtencion = 2000)
+	var menta2 = new Menta(altura = 0.3, anioDeObtencion = 2000)
+	var soja1 = new Soja(altura = 0.6, anioDeObtencion = 2009)
+	
+
+
+test "menta" {
+
+	assert.equals(true,menta1.daNuevasSemillas())
+	assert.equals(3, menta1.cuantoEspacioOcupa())
+	assert.equals(false,menta2.daNuevasSemillas())
+	assert.equals(0.9, menta2.cuantoEspacioOcupa())
+
+}
+
+test "soja" {
+	
+	assert.equals(7,soja1.cuantasHorasDeSolTolera())
+	assert.equals(false,soja1.daNuevasSemillas())
+	assert.equals(0.3, soja1.cuantoEspacioOcupa())
+}
+
+
+}

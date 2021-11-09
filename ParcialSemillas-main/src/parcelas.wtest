@@ -1,0 +1,15 @@
+import parcelas.*
+
+describe "parcelas"{
+	
+	var parcela1 = new Parcelas(ancho = 20, largo = 1, horasDeSolQueRecibePorDia = 8)
+	
+
+test "test1" {
+
+	assert.equals(20, parcela1.supercieDeParcela())
+	assert.equals(4, parcela1.cantMaxDePlantasQueTolera())
+
+}
+
+}
